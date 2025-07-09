@@ -1,6 +1,6 @@
 # Pokémon Explorer
 
-[GitHub Repository](https://github.com/your-username/your-repo-name)
+[GitHub Repository](https://github.com/Ankush2107/Pokemon-Explorer)
 
 ## Getting Started
 
@@ -8,8 +8,8 @@ Follow these steps to run the project locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name/pokeapi-explorer
+   git remote add origin https://github.com/Ankush2107/Pokemon-Explorer.git
+   cd pokeapi-explorer
    ```
 
 2. **Install dependencies:**
