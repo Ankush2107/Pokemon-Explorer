@@ -14,8 +14,8 @@ async function getPokemonsWithDetails() {
         name: data.name,
         image: data.sprites.other["official-artwork"].front_default,
         types: data.types.map((t: any) => t.type.name),
-        height: data.height / 10, // decimeters to meters
-        weight: data.weight / 10, // hectograms to kg
+        height: data.height / 10,
+        weight: data.weight / 10,
       };
     })
   );

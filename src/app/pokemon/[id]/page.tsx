@@ -27,7 +27,6 @@ function padId(id: string | number) {
 }
 
 export async function generateStaticParams() {
-  // Pre-generate for first 151 Pokemons
   const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
   const data = await res.json();
   return data.results.map((pokemon: { url: string }) => {
@@ -46,11 +45,9 @@ export default async function PokemonDetail(props: { params: { id: string } }) {
   const { id } = props.params;
   const pokemon = await getPokemon(id);
   if (!pokemon) return notFound();
-
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-2">
       <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-8 grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Left: Image, name, badges, height, weight */}
         <div className="flex flex-col items-center md:items-start">
           <Link href="/" className="mb-6 text-gray-600 hover:text-blue-600 flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 bg-white shadow-sm w-fit">
             <span className="text-xl">←</span> Back to Home
@@ -85,7 +82,6 @@ export default async function PokemonDetail(props: { params: { id: string } }) {
             </div>
           </div>
         </div>
-        {/* Right: Stats, Abilities, Moves */}
         <div className="flex flex-col gap-8 justify-center">
           <div>
             <h2 className="text-2xl font-bold mb-4 text-gray-800">Base Stats</h2>

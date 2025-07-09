@@ -59,7 +59,6 @@ export default function PokemonList({ pokemons }: { pokemons: any[] }) {
 
   return (
     <>
-      {/* Gradient header and subtitle */}
       <div className="w-full py-16 px-4 mb-0 bg-gradient-to-r from-red-400 via-blue-400 to-yellow-300 flex flex-col items-center justify-center">
         <div className="flex items-center gap-3 mb-2">
           <span className="text-4xl">⚡</span>
@@ -81,7 +80,6 @@ export default function PokemonList({ pokemons }: { pokemons: any[] }) {
           />
         )}
       </div>
-      {/* Card grid */}
       <div className="max-w-6xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 px-2">
         {visible.map((pokemon) => (
           <Link
@@ -89,7 +87,6 @@ export default function PokemonList({ pokemons }: { pokemons: any[] }) {
             href={`/pokemon/${pokemon.id}`}
             className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition flex flex-col items-center p-8 border border-gray-100 relative min-h-[270px] min-w-[260px]"
           >
-            {/* Number badge */}
             <span className="absolute top-4 right-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
               {padId(pokemon.id)}
             </span>
